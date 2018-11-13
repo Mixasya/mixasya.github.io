@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Acme');
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    background: #FFF;
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: #004697;
+}
+
+.container {
+    
+    margin: 0 auto;
+    width: 1160px;
+}
+
+.img-responsive {
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+}
+
+@media(max-width: 1160px) {
+    .container {
+        width: 100%;
+    }
+}
+
+#main-header {
+    background: #FFF;
+    padding: 20px 0;
+}
+
+#main-header .container {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#main-header .logotype {
+    width: 100px;
+}
+
+#main-header .info {
+    margin-left: 20px;
+}
+
+#main-header h1.name {
+    margin: 0;
+    padding: 0;
+}
+
+#main-navigation {
+    background: #FFF;
+    border-bottom: 2px solid #D2242F;
+}
+
+#main-navigation ul {
+    align-items: stretch;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#main-navigation li {
+    width: 25%;
+}
+
+#main-navigation li>a {
+    color: #333;
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+#main-navigation li:hover>a {
+    background: #D2242F;
+    color: #FFF;
+}
+
+#main-navigation li .submenu {
+    background: #FFF;
+    /* border: 1px solid #004697; */
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+    display: none;
+    left: 0;
+    padding: 20px;
+    position: absolute;
+    /* right: 0; */
+    z-index: 10000;
+}
+
+#main-navigation li:hover .submenu {
+    display: block;
+}
+
+#main-footer {
+    background: #333;
+    color: #EFEFEF;
+    font-size: 12px;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+main section {
+    background: #FFF;
+    overflow: hidden;
+}
+
+.block-items,
+.block-videos {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /*margin-left: -10px;
+    margin-right: -10px;*/
+}
+
+.block-item,
+.block-video {
+    box-sizing: border-box;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    max-width: calc(25% - 20px);
+}
+.block-item .image svg{
+    height: 200px;
+    vertical-align: bottom;
+    width: 100%;
+}
+
+.block-video {
+    border: 1px solid #CCC;
+    padding: 2px;
+    position: relative;
+}
+
+.block-video:before {
+    background: #000;
+    bottom: 2px;
+    content: "";
+    display: block;
+    left: 2px;
+    opacity: .7;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    transition: opacity .15s ease-in;
+    z-index: 1;
+}
+
+.block-video:hover:before {
+    opacity: 0;
+}
+
+.block-video iframe {
+    height: 150px;
+    width: 100%;
+    z-index: 0;
+}
+
+@media(max-width: 960px) {
+    .block-item,
+    .block-video {
+        width: calc(33.33% - 20px);
+    }
+}
+
+@media(max-width: 768px) {
+    .block-item,
+    .block-video {
+        width: calc(50% - 20px);
+    }
+}
+
+@media(max-width: 478px) {
+    .block-item,
+    .block-video {
+        width: calc(100% - 20px);
+    }
+}
+
+.block-item a {
+    border: 1px solid #EFEFEF;
+    color: #878787;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .15s ease-in;
+}
+
+.block-item a .title {
+    display: block;
+    font-size: 25px;
+    margin: 20px 0;
+    text-decoration: none;
+    text-align: center;
+}
+
+.block-item a:hover {
+    border-color: #CCC;
+    color: rgb(60,69 ,82 );
+}
+.block-item a .image{
+    display: block;
+}
+h1{
+    font-family: 'Open Sans', sans-serif;
+    font-size:48px;
+    
+    
+}
+.slogan{
+    font-size:24px;
+}
+.content{
+    font-size:18px;
+    padding-bottom:50px;
+    
+}
+h3{
+    font-family: 'Open Sans', sans-serif;
+   
+    text-align: center;
+    font-size:38px;
+    padding-top: 20px
+}
+#carouselExampleIndicators{
+    padding-top:15px;   
+}
+
+
+.block-inner-slider{
+    /* align-items: flex-start;
+    display: flex;
+    justify-content: space-between;*/
+    
+    
+}
+.block-inner-slider .images{
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-left: 40px
+}
+.block-inner-slider .images .image{
+    height: 400px;
+    text-align: center;
+}
+.block-inner-slider .images .image img{
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    width: auto;
+}
+.block-inner-slider .description{
+    flex-grow: 1;
+    margin-left: 40px;
+}
+
+/*----block-games----*/
+.block-games{
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: -10px;
+    margin-right: -10px;
+    overflow: hidden;
+}
+.block-games .block-game{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px 20px;
+    justify-content: space-between;
+    text-decoration: none;
+
+    width: calc(25% - 20px);
+}
+.block-games .block-game .image{
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.block-games .block-game .image svg{
+    height: 200px;
+    vertical-align: bottom;
+    width: 100%;
+
+}
+.block-games .block-game .title{
+    
+    /*border: 1px solid #CCC;*/
+    border-top: none;
+    color: #878787;
+    display: block;
+    flex-grow: 1;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    font-size:25px
+}
+
+.block-games .block-game:hover .title{
+    color:rgb(60,69 ,82 );
+}
+
+/*----block-youtubes----*/
+
+.block-youtubes{
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: -10px;
+    margin-right: -10px;
+    overflow: hidden;
+}
+.block-youtubes .block-youtube{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px 20px;
+    justify-content: space-between;
+    text-decoration: none;
+
+    width: calc(25% - 20px);
+}
+
+.block-youtubes .block-youtube svg{
+    height: 200px;
+    vertical-align: bottom;
+    width: 100%;
+
+}
+
+/*.bg-game{
+    background: url('https://www.actugaming.net/wp-content/uploads/2018/08/red-dead-redemption-2-1.jpg') center bottom no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    position: relative;
+}
+.bg-game .container{
+    position: relative;
+    z-index: 1;
+}
+.bg-game h2.title{
+    color:#fff;
+}
+.bg-game::before{
+    background: rgba(0,0,0,.5);
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.inner-bg h2.title{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 30px;
+    padding: 100px 40px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.inner-bg h2.title::before{
+    background: rgba(0,0,0,.5);
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+.inner-bg h2.title span{
+    position: relative;
+    z-index: 1;
+}
+
+.inner-bg-horror h2.title{
+    background-image: url('../upload/game-bg.jpg');
+    color: #FFF;
+}
+.inner-bg-strategy h2.title{
+    background-image: url('../upload/strategy-bg.png');
+    color: #FFF;
+}
+
+.bg-video{
+    background: url('https://i1.wp.com/androidkenya.com/wp-content/uploads/2017/04/YouTube.jpg?fit=700%2C394&ssl=1') center bottom no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    position: relative;
+}
+.bg-video .container{
+    position: relative;
+    z-index: 1;
+}
+.bg-video h2.title{
+    color:rgb(163,162,167);
+}
+.bg-video::before{
+    background: rgba(0,0,0,.5);
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}*/
+
+/**--миша--*/
+.bg-command .block-items{
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+/*--command-mini--*/
+.command-mini-info {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+}
+
+.command-mini-info .image {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 200px;
+    position: relative;
+    margin-right: 20px;    
+}
+
+.command-mini-info .title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+
+.command-mini-info .params {
+    display: flex;
+    justify-content: space-between;
+
+}
+.command-mini-info .params .column{
+    width: 50%;
+
+}
+.command-mini-info .params ul{
+list-style: none;
+margin: 0;
+padding: 0;
+
+}
+.command-mini-info .params ul .image{
+    width: 50px;
+    height: 50px;
+
+
+}
+.command-mini-info .params .title{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+
+.command-mini-info .description {
+    font-size: 12px;
+}
+
+.command-members li{
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px;
+}
+.command-members li .image{
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 300px;
+    margin-right: 10px;
+    
+}
+.command-members li .name{
+    font-weight: bold;
+}
+
+#command-info.navi{
+    background: url('https://images.wallpaperscraft.ru/image/natus_vincere_navi_krass_dota_csgo_103252_1920x1080.jpg') center center;
+    background-size: cover;
+}
+#command-info.astralis{
+    background: url('https://i.redd.it/ohl9t7jxtoj11.png') center top;
+    background-size: cover;
+}
+#command-info.gambit{
+    background: url('https://img4.goodfon.ru/wallpaper/big/5/ef/gambit-csgo-cs-go-counter-strike.jpg') center top;
+/*background-size: cover;*/
+}
+
+
+#command-info {
+    padding: 100px 0;
+}
+#command-info .container{
+    background: #FFF;
+    box-sizing: border-box;
+    padding: 20px;
+}
+#command-info .short .name{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+#command-info .short{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+#command-info .short .logotype{
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-right: 40px;
+    width: 200px;
+}
+
+#command-info h2.title{
+    color: rgb(60,69 ,82 );
+    font-size: 25px;
+}
+#command-info .about{
+    font-size: 18px;
+    line-height: 1.5em;
+}
+#command-info .columns{
+    align-items: flex-start;
+    display: flex;
+    margin: 0 -50px 20px;
+    justify-content: space-between;
+}
+#command-info .column{
+    box-sizing: border-box;
+    margin: 0 50px;
+    width: calc(50% - 100px);
+}
+#command-info .column  h3{
+    padding-top: 10px;
+    margin: 0 0 20px;
+}
+#command-info .column .title h3{
+    text-align: left;
+}
+#command-info .column .command-members{
+    margin: 0;
+    padding: 0;
+}
+#command-info .column .command-members li{
+    align-items: flex-start;
+    display: flex;
+    margin-bottom: 20px;
+}
+#command-info .column .command-members li .image{
+    height: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-right:30px;
+    width: 100px;
+}
+#command-info .column .command-members li h4{
+    margin: 0 0 10px;
+    padding: 0;
+}
+#command-info .column .command-members li .info{
+    font-size: 14px;
+    font-weight: normal;
+}
