@@ -482,16 +482,36 @@ h3{
 
 }
 .command-mini-info .params .column{
-    width: 50%;
+   flex-grow: 1;
+
 
 }
+.command-mini-info .params .column:first-child{
+    margin-right: 10px;
+}
+.command-mini-info .params .column:first-child + .column{
+    margin-left: 10px;
+}
 .command-mini-info .params ul{
+    display: block;
 list-style: none;
 margin: 0;
 padding: 0;
-
+width: 100%;
+}
+.command-mini-info .params ul li{
+    border-top: 1px dashed #CCC;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+.command-mini-info .params ul li:first-child{
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
 }
 .command-mini-info .params ul .image{
+    align-items: center;
+    display: flex;
     width: 50px;
     height: 50px;
 
@@ -612,4 +632,26 @@ padding: 0;
 #command-info .column .command-members li .info{
     font-size: 14px;
     font-weight: normal;
+}
+.command-mini-info .about .Information{
+
+    color: #000;
+    text-decoration: none;
+    margin-top: 20px;
+}
+.command-mini-info .about .Information a{
+    background: #004697;
+    box-sizing: border-box;
+    border: 3px solid #004697;
+    color: #FFF;
+    font-size: 12px;
+    outline: none;
+    padding: 7px 10px;
+    text-decoration: none;
+    transition: all .15s ease-in;
+}
+.command-mini-info .about .Information a:hover{
+    background: transparent;
+    border-width: 3px;
+    color: #004697;
 }
