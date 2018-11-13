@@ -602,6 +602,11 @@ width: 100%;
     margin: 0 50px;
     width: calc(50% - 100px);
 }
+#command-info .column ul li{
+    border-top: 1px dashed #CCC;
+    margin-top: 10px;
+    padding-top: 10px;
+}
 #command-info .column  h3{
     padding-top: 10px;
     margin: 0 0 20px;
